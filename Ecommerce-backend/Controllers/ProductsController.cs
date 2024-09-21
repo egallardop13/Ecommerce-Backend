@@ -13,7 +13,7 @@ namespace Ecommerce_backend.Controllers{
 
  
 [ApiController]
-[Route("api/[controller]")]
+[Route("/[controller]")]
 
 
 public class ProductsController : ControllerBase

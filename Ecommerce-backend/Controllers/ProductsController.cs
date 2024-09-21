@@ -12,9 +12,9 @@ using Ecommerce_backend.Models;
 namespace Ecommerce_backend.Controllers{
 
  
+[ApiController]
 [Route("api/[controller]")]
 
-[ApiController]
 
 public class ProductsController : ControllerBase
 

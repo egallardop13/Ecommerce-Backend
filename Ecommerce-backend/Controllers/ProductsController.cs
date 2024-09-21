@@ -9,24 +9,27 @@ using System.Threading.Tasks;
 using Microsoft.EntityFrameworkCore;
 using Ecommerce_backend.Data;
 using Ecommerce_backend.Models;
+using Microsoft.Extensions.Configuration;
+using Microsoft.IdentityModel.Tokens;
+
 namespace Ecommerce_backend.Controllers{
 
  
 [ApiController]
-[Route("/[controller]")]
+[Route("[controller]")]
 
 
 public class ProductsController : ControllerBase
 
 {
 
-    private AppDbContext _context;
+     AppDbContext _context;
  
-    public ProductsController(AppDbContext context)
+    public ProductsController(IConfiguration config)
 
     {
 
-        _context = context;
+        _context = new AppDbContext(config);
 
     }
  
